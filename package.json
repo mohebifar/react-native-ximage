@@ -4,7 +4,8 @@
   "description": "An alternative to react native's Image component with cache support",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run eslint",
+    "eslint": "eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,11 @@
   "homepage": "https://github.com/mohebifar/react-native-ximage#readme",
   "dependencies": {
     "blueimp-md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.2",
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.3.0"
   }
 }

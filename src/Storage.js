@@ -35,6 +35,10 @@ export default class Storage {
     fs.mkdir(this.getCacheDirectory());
   }
 
+  setHashFunction(hashFunction) {
+    this.hashFunction = hashFunction;
+  }
+
   hashUrl(url) {
     return this.hashFunction(url);
   }
@@ -53,13 +57,16 @@ export default class Storage {
     return fs
       .exists(filePath)
       .then(exists => {
+        let result;
         if (exists) {
-          return filePath;
+          result = filePath;
         } else {
-          return this
+          result = this
             .download(url)
             .then(() => filePath);
         }
+
+        return result;
       });
   }
 }

@@ -1,7 +1,7 @@
 import React, {
   Component,
   PropTypes,
-  Image
+  Image,
 } from 'react-native';
 import { storage } from './Storage';
 
@@ -10,13 +10,13 @@ export default class XImage extends Component {
     url: PropTypes.string,
     defaultSource: PropTypes.oneOfType([
       PropTypes.object,
-      PropTypes.number
-    ])
+      PropTypes.number,
+    ]),
   };
 
   state = {
     loaded: false,
-    loading: false
+    loading: false,
   };
 
   componentWillMount() {
@@ -36,8 +36,8 @@ export default class XImage extends Component {
           loading: false,
           loaded: true,
           source: {
-            uri: `file:///${filePath}`
-          }
+            uri: `file:///${filePath}`,
+          },
         });
       });
   }
@@ -45,14 +45,20 @@ export default class XImage extends Component {
   renderDefaultImage() {
     const { url, defaultSource, ...rest } = this.props;
 
-    return <Image {...rest} source={defaultSource}/>;
+    return (<Image
+      {...rest}
+      source={defaultSource}
+    />);
   }
 
   renderLocalImage() {
     const { url, defaultSource, ...rest } = this.props;
     const { source } = this.state;
 
-    return <Image {...rest} source={source}/>;
+    return (<Image
+      {...rest}
+      source={source}
+    />);
   }
 
   render() {
