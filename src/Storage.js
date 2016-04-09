@@ -56,18 +56,7 @@ export default class Storage {
 
     return fs
       .exists(filePath)
-      .then(exists => {
-        let result;
-        if (exists) {
-          result = filePath;
-        } else {
-          result = this
-            .download(url)
-            .then(() => filePath);
-        }
-
-        return result;
-      });
+      .then(exists => exists ? filePath : this.download(url).then(() => filePath));
   }
 }
 
