@@ -1,0 +1,33 @@
+{
+  "name": "react-native-ximage",
+  "version": "1.0.0",
+  "description": "An alternative to react native's Image component with cache support",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohebifar/react-native-ximage.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "ios",
+    "android",
+    "image",
+    "cache"
+  ],
+  "author": "Mohamad Mohebifar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohebifar/react-native-ximage/issues"
+  },
+  "homepage": "https://github.com/mohebifar/react-native-ximage#readme",
+  "dependencies": {
+    "blueimp-md5": "^2.3.0"
+  }
+}
