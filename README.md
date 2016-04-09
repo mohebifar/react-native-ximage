@@ -37,7 +37,7 @@ If you want XImage to show a default image while the image is being downloaded o
 # Storage options configuration
 XImage by default stores the downloaded images in `BASE_DIR/.images/` and hashes the URL with md5. If you want to change any of those options you can call two methods on Storage singleton.
 
-```
+```js
 import { Storage } from 'react-native-ximage';
 import sha512 from 'some-crypt-lib';
 
