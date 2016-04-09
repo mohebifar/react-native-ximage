@@ -1,22 +1,22 @@
 import fs from 'react-native-fs';
 import md5 from 'blueimp-md5';
 
-const singleton = Symbol();
-const singletonEnforcer = Symbol();
+// simple constructor string param to prevent the user to create instance
+const singleton = 'STORAGE_SINGLETON';
 
 export default class Storage {
   constructor(enforcer) {
-    if (enforcer !== singletonEnforcer) {
+    if (enforcer !== singleton) {
       throw new Error('Cannot construct an object of Storage');
     }
 
     this.hashFunction = md5;
-    this.setCacheDirectory('images');
+    this.setCacheDirectory('.images');
   }
 
   static get singleton() {
     if (!this[singleton]) {
-      this[singleton] = new Storage(singletonEnforcer);
+      this[singleton] = new Storage(singleton);
     }
 
     return this[singleton];
