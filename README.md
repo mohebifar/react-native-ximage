@@ -21,7 +21,7 @@ npm i -S react-native-ximage
 To make XImage download and cache an image, you need to set `url` prop.
 
 ```jsx
-import XImage from 'react-native-ximage`;
+import XImage from 'react-native-ximage';
 
 // ...
 <XImage url="https://facebook.github.io/react/img/logo_og.png"/>
@@ -31,7 +31,7 @@ If you want XImage to show a default image while the image is being downloaded o
 
 
 ```jsx
-<XImage 
+<XImage
   url="https://facebook.github.io/react/img/logo_og.png"
   defaultSource={require('./images/defaultLogo.jpg')}
 />
