@@ -1,3 +1,6 @@
+# DEPRECATED
+**You would not need this package** as react-native's Image component does caching. Also, react-native>=0.25 allows [prefetch remote images](https://github.com/facebook/react-native/commit/f7bcb3e98d489bb40ee8fd7dd69918521344f657).
+
 # react-native-ximage
 **XImage** is an alternative to react native's Image component with cache support. It offers a component and a storage class.
 
